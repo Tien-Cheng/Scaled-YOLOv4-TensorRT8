@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "scaled-yolov4-tensorrt8"
+version = "0.1.0"
+description = ""
+authors = ["Tien-Cheng <tiencheng@protonmail.com>"]
+readme = "README.md"
+packages = [{include = "scaled_yolov4_tensorrt8"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^1.13.0"
+dvc = "^2.35.2"
+dvc-gdrive = "^2.19.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
