@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.13)
 
 project(yolov4-p6)
 
@@ -32,6 +32,8 @@ find_package(OpenCV)
 include_directories(OpenCV_INCLUDE_DIRS)
 
 add_executable(yolov4-p6 ${PROJECT_SOURCE_DIR}/yolov4-p6.cpp)
+
+target_link_libraries(myplugins nvinfer)
 target_link_libraries(yolov4-p6 nvinfer)
 target_link_libraries(yolov4-p6 cudart)
 target_link_libraries(yolov4-p6 myplugins)
